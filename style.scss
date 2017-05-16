@@ -1,0 +1,128 @@
+$light-gray-color: #f1f1f1;
+$green-color: #009688;
+$dark-color: #757575;
+
+@mixin box-shadow {
+	-webkit-box-shadow: 0 7px 8px 0 gray;
+	-moz-box-shadow: 0 7px 8px 0 gray;
+	box-shadow: 0 7px 8px 0 gray;
+}
+
+
+// Global
+* {box-sizing: border-box;}
+
+html {
+	width: 100%;
+	height: 100%;
+	background-color: $light-gray-color;
+}
+
+h1, h3, h4, p {color: $dark-color;}
+
+i {color: $green-color;}
+
+#contener {
+	width: 96%;
+	max-width: 1280px;
+	margin: 10px auto;
+}
+
+
+// Left section
+#col-3 {
+	width: 32.83%;
+	background-color: white;
+	padding-bottom: 1.5em;
+	float: left;
+	@include box-shadow; 
+	img{width: 100%;}
+	#photo{position: relative;}
+
+	#photo #name {
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		h1 {color: white;}
+	}
+	.container-fluid{padding-top: 1em;}
+}
+
+
+// Right section
+#col-9 {
+	float: right;
+	width: 66.17%;
+	#quote {padding-bottom: 35px;}
+
+	.box {
+		margin-bottom: 10px;
+		padding: 1em;
+		background-color: white;
+		@include box-shadow;
+
+		h4 {
+			padding-top: 5px;
+			text-align: center;
+			color: $green-color;
+		}
+	}
+
+	#date {
+		color: $green-color;
+
+		span {
+			color: white;
+			background-color: $green-color;
+			padding: 0 5px;
+			border-radius: 2px;
+		}
+	}
+}
+
+.bar {
+	background-color: $light-gray-color;
+	width: 95%;
+	
+	div {
+		background-color: $green-color;
+		text-align: center;
+		color: white;
+		width: 0%;
+	}
+}
+
+.bar, .bar div {
+	border-radius: 30px;
+	height: 1.2em;
+}
+
+#col-3, #col-9 .box {.skill {margin: 5px;}}
+
+footer {
+	background-color: $green-color;
+	float: right;
+	margin-top: 2em;
+	padding: 1em 100px;
+
+	p {font-size: 1.2em;}
+	a {padding: 0.2em 0.5em;}
+
+	p, a i {
+		color: white;
+		display: inline;
+	}
+}
+
+
+// ResponsiveWebDesign
+@media (max-width: 768px){
+	#col-3, #col-9{width: 100%;}
+	#col-3 {margin-bottom: 10px;}
+	footer {padding: 1em 2em;}
+}
+
+
+@media (max-width: 250px){
+	#col-3, #col-9{width: 240px;float: left;}
+}
