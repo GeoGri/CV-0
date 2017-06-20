@@ -47,7 +47,7 @@ i {color: $green-color;}
 	}
 	.container-fluid{padding-top: 1em;}
 }
-
+#name h1 {color: black !important;}
 
 // Right section
 #col-9 {
@@ -82,7 +82,7 @@ i {color: $green-color;}
 
 .bar {
 	background-color: $light-gray-color;
-	width: 95%;
+	width: 100%;
 	
 	div {
 		background-color: $green-color;

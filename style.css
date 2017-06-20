@@ -38,6 +38,9 @@ i {
   #col-3 .container-fluid {
     padding-top: 1em; }
 
+#name h1 {
+  color: black !important; }
+
 #col-9 {
   float: right;
   width: 66.17%; }
@@ -64,7 +67,7 @@ i {
 
 .bar {
   background-color: #f1f1f1;
-  width: 95%; }
+  width: 100%; }
   .bar div {
     background-color: #009688;
     text-align: center;
